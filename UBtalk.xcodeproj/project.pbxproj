@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F0FCFBD01C8E041B00B19B76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FCFBCF1C8E041B00B19B76 /* main.m */; };
+		F0FCFBD31C8E041B00B19B76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FCFBD21C8E041B00B19B76 /* AppDelegate.m */; };
+		F0FCFBD61C8E041B00B19B76 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FCFBD51C8E041B00B19B76 /* ViewController.m */; };
+		F0FCFBD91C8E041B00B19B76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0FCFBD71C8E041B00B19B76 /* Main.storyboard */; };
+		F0FCFBDB1C8E041B00B19B76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0FCFBDA1C8E041B00B19B76 /* Assets.xcassets */; };
+		F0FCFBDE1C8E041C00B19B76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0FCFBDC1C8E041C00B19B76 /* LaunchScreen.storyboard */; };
+		F0FCFBE91C8E041C00B19B76 /* UBtalkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FCFBE81C8E041C00B19B76 /* UBtalkTests.m */; };
+		F0FCFBF41C8E041C00B19B76 /* UBtalkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FCFBF31C8E041C00B19B76 /* UBtalkUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F0FCFBE51C8E041C00B19B76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0FCFBC31C8E041B00B19B76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0FCFBCA1C8E041B00B19B76;
+			remoteInfo = UBtalk;
+		};
+		F0FCFBF01C8E041C00B19B76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0FCFBC31C8E041B00B19B76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0FCFBCA1C8E041B00B19B76;
+			remoteInfo = UBtalk;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F0FCFBCB1C8E041B00B19B76 /* UBtalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UBtalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0FCFBCF1C8E041B00B19B76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F0FCFBD11C8E041B00B19B76 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F0FCFBD21C8E041B00B19B76 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F0FCFBD41C8E041B00B19B76 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F0FCFBD51C8E041B00B19B76 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F0FCFBD81C8E041B00B19B76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F0FCFBDA1C8E041B00B19B76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F0FCFBDD1C8E041C00B19B76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F0FCFBDF1C8E041C00B19B76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0FCFBE41C8E041C00B19B76 /* UBtalkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UBtalkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0FCFBE81C8E041C00B19B76 /* UBtalkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UBtalkTests.m; sourceTree = "<group>"; };
+		F0FCFBEA1C8E041C00B19B76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0FCFBEF1C8E041C00B19B76 /* UBtalkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UBtalkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0FCFBF31C8E041C00B19B76 /* UBtalkUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UBtalkUITests.m; sourceTree = "<group>"; };
+		F0FCFBF51C8E041C00B19B76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F0FCFBC81C8E041B00B19B76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0FCFBE11C8E041C00B19B76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0FCFBEC1C8E041C00B19B76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F0FCFBC21C8E041B00B19B76 = {
+			isa = PBXGroup;
+			children = (
+				F0FCFBCD1C8E041B00B19B76 /* UBtalk */,
+				F0FCFBE71C8E041C00B19B76 /* UBtalkTests */,
+				F0FCFBF21C8E041C00B19B76 /* UBtalkUITests */,
+				F0FCFBCC1C8E041B00B19B76 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F0FCFBCC1C8E041B00B19B76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0FCFBCB1C8E041B00B19B76 /* UBtalk.app */,
+				F0FCFBE41C8E041C00B19B76 /* UBtalkTests.xctest */,
+				F0FCFBEF1C8E041C00B19B76 /* UBtalkUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F0FCFBCD1C8E041B00B19B76 /* UBtalk */ = {
+			isa = PBXGroup;
+			children = (
+				F0FCFBD11C8E041B00B19B76 /* AppDelegate.h */,
+				F0FCFBD21C8E041B00B19B76 /* AppDelegate.m */,
+				F0FCFBD41C8E041B00B19B76 /* ViewController.h */,
+				F0FCFBD51C8E041B00B19B76 /* ViewController.m */,
+				F0FCFBD71C8E041B00B19B76 /* Main.storyboard */,
+				F0FCFBDA1C8E041B00B19B76 /* Assets.xcassets */,
+				F0FCFBDC1C8E041C00B19B76 /* LaunchScreen.storyboard */,
+				F0FCFBDF1C8E041C00B19B76 /* Info.plist */,
+				F0FCFBCE1C8E041B00B19B76 /* Supporting Files */,
+			);
+			path = UBtalk;
+			sourceTree = "<group>";
+		};
+		F0FCFBCE1C8E041B00B19B76 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F0FCFBCF1C8E041B00B19B76 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F0FCFBE71C8E041C00B19B76 /* UBtalkTests */ = {
+			isa = PBXGroup;
+			children = (
+				F0FCFBE81C8E041C00B19B76 /* UBtalkTests.m */,
+				F0FCFBEA1C8E041C00B19B76 /* Info.plist */,
+			);
+			path = UBtalkTests;
+			sourceTree = "<group>";
+		};
+		F0FCFBF21C8E041C00B19B76 /* UBtalkUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F0FCFBF31C8E041C00B19B76 /* UBtalkUITests.m */,
+				F0FCFBF51C8E041C00B19B76 /* Info.plist */,
+			);
+			path = UBtalkUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F0FCFBCA1C8E041B00B19B76 /* UBtalk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0FCFBF81C8E041C00B19B76 /* Build configuration list for PBXNativeTarget "UBtalk" */;
+			buildPhases = (
+				F0FCFBC71C8E041B00B19B76 /* Sources */,
+				F0FCFBC81C8E041B00B19B76 /* Frameworks */,
+				F0FCFBC91C8E041B00B19B76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UBtalk;
+			productName = UBtalk;
+			productReference = F0FCFBCB1C8E041B00B19B76 /* UBtalk.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F0FCFBE31C8E041C00B19B76 /* UBtalkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0FCFBFB1C8E041C00B19B76 /* Build configuration list for PBXNativeTarget "UBtalkTests" */;
+			buildPhases = (
+				F0FCFBE01C8E041C00B19B76 /* Sources */,
+				F0FCFBE11C8E041C00B19B76 /* Frameworks */,
+				F0FCFBE21C8E041C00B19B76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F0FCFBE61C8E041C00B19B76 /* PBXTargetDependency */,
+			);
+			name = UBtalkTests;
+			productName = UBtalkTests;
+			productReference = F0FCFBE41C8E041C00B19B76 /* UBtalkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F0FCFBEE1C8E041C00B19B76 /* UBtalkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0FCFBFE1C8E041C00B19B76 /* Build configuration list for PBXNativeTarget "UBtalkUITests" */;
+			buildPhases = (
+				F0FCFBEB1C8E041C00B19B76 /* Sources */,
+				F0FCFBEC1C8E041C00B19B76 /* Frameworks */,
+				F0FCFBED1C8E041C00B19B76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F0FCFBF11C8E041C00B19B76 /* PBXTargetDependency */,
+			);
+			name = UBtalkUITests;
+			productName = UBtalkUITests;
+			productReference = F0FCFBEF1C8E041C00B19B76 /* UBtalkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F0FCFBC31C8E041B00B19B76 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = IMS;
+				TargetAttributes = {
+					F0FCFBCA1C8E041B00B19B76 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					F0FCFBE31C8E041C00B19B76 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = F0FCFBCA1C8E041B00B19B76;
+					};
+					F0FCFBEE1C8E041C00B19B76 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = F0FCFBCA1C8E041B00B19B76;
+					};
+				};
+			};
+			buildConfigurationList = F0FCFBC61C8E041B00B19B76 /* Build configuration list for PBXProject "UBtalk" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F0FCFBC21C8E041B00B19B76;
+			productRefGroup = F0FCFBCC1C8E041B00B19B76 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F0FCFBCA1C8E041B00B19B76 /* UBtalk */,
+				F0FCFBE31C8E041C00B19B76 /* UBtalkTests */,
+				F0FCFBEE1C8E041C00B19B76 /* UBtalkUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F0FCFBC91C8E041B00B19B76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0FCFBDE1C8E041C00B19B76 /* LaunchScreen.storyboard in Resources */,
+				F0FCFBDB1C8E041B00B19B76 /* Assets.xcassets in Resources */,
+				F0FCFBD91C8E041B00B19B76 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0FCFBE21C8E041C00B19B76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0FCFBED1C8E041C00B19B76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F0FCFBC71C8E041B00B19B76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0FCFBD61C8E041B00B19B76 /* ViewController.m in Sources */,
+				F0FCFBD31C8E041B00B19B76 /* AppDelegate.m in Sources */,
+				F0FCFBD01C8E041B00B19B76 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0FCFBE01C8E041C00B19B76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0FCFBE91C8E041C00B19B76 /* UBtalkTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0FCFBEB1C8E041C00B19B76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0FCFBF41C8E041C00B19B76 /* UBtalkUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F0FCFBE61C8E041C00B19B76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0FCFBCA1C8E041B00B19B76 /* UBtalk */;
+			targetProxy = F0FCFBE51C8E041C00B19B76 /* PBXContainerItemProxy */;
+		};
+		F0FCFBF11C8E041C00B19B76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0FCFBCA1C8E041B00B19B76 /* UBtalk */;
+			targetProxy = F0FCFBF01C8E041C00B19B76 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F0FCFBD71C8E041B00B19B76 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0FCFBD81C8E041B00B19B76 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F0FCFBDC1C8E041C00B19B76 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0FCFBDD1C8E041C00B19B76 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F0FCFBF61C8E041C00B19B76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F0FCFBF71C8E041C00B19B76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F0FCFBF91C8E041C00B19B76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = UBtalk/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.IMS.JY.UBtalk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F0FCFBFA1C8E041C00B19B76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = UBtalk/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.IMS.JY.UBtalk;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F0FCFBFC1C8E041C00B19B76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = UBtalkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.IMS.JY.UBtalkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UBtalk.app/UBtalk";
+			};
+			name = Debug;
+		};
+		F0FCFBFD1C8E041C00B19B76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = UBtalkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.IMS.JY.UBtalkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UBtalk.app/UBtalk";
+			};
+			name = Release;
+		};
+		F0FCFBFF1C8E041C00B19B76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = UBtalkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.IMS.JY.UBtalkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = UBtalk;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		F0FCFC001C8E041C00B19B76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = UBtalkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.IMS.JY.UBtalkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = UBtalk;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F0FCFBC61C8E041B00B19B76 /* Build configuration list for PBXProject "UBtalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0FCFBF61C8E041C00B19B76 /* Debug */,
+				F0FCFBF71C8E041C00B19B76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0FCFBF81C8E041C00B19B76 /* Build configuration list for PBXNativeTarget "UBtalk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0FCFBF91C8E041C00B19B76 /* Debug */,
+				F0FCFBFA1C8E041C00B19B76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F0FCFBFB1C8E041C00B19B76 /* Build configuration list for PBXNativeTarget "UBtalkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0FCFBFC1C8E041C00B19B76 /* Debug */,
+				F0FCFBFD1C8E041C00B19B76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F0FCFBFE1C8E041C00B19B76 /* Build configuration list for PBXNativeTarget "UBtalkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0FCFBFF1C8E041C00B19B76 /* Debug */,
+				F0FCFC001C8E041C00B19B76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F0FCFBC31C8E041B00B19B76 /* Project object */;
+}
