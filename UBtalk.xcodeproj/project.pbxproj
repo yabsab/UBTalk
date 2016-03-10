@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8368B56456A4803840BCFE04 /* libPods-UBtalk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 176EAA0765C6A504C0AAF3A7 /* libPods-UBtalk.a */; };
 		F0FCFBD01C8E041B00B19B76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FCFBCF1C8E041B00B19B76 /* main.m */; };
 		F0FCFBD31C8E041B00B19B76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FCFBD21C8E041B00B19B76 /* AppDelegate.m */; };
-		F0FCFBD61C8E041B00B19B76 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FCFBD51C8E041B00B19B76 /* ViewController.m */; };
+		F0FCFBD61C8E041B00B19B76 /* UBLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FCFBD51C8E041B00B19B76 /* UBLoginView.m */; };
 		F0FCFBD91C8E041B00B19B76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0FCFBD71C8E041B00B19B76 /* Main.storyboard */; };
 		F0FCFBDB1C8E041B00B19B76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0FCFBDA1C8E041B00B19B76 /* Assets.xcassets */; };
 		F0FCFBDE1C8E041C00B19B76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0FCFBDC1C8E041C00B19B76 /* LaunchScreen.storyboard */; };
@@ -35,12 +36,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		176EAA0765C6A504C0AAF3A7 /* libPods-UBtalk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UBtalk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33CAD63B88E6F7B772E26068 /* Pods-UBtalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBtalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UBtalk/Pods-UBtalk.debug.xcconfig"; sourceTree = "<group>"; };
+		7F0F384513E31BF96376D56D /* Pods-UBtalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBtalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-UBtalk/Pods-UBtalk.release.xcconfig"; sourceTree = "<group>"; };
 		F0FCFBCB1C8E041B00B19B76 /* UBtalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UBtalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0FCFBCF1C8E041B00B19B76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F0FCFBD11C8E041B00B19B76 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F0FCFBD21C8E041B00B19B76 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F0FCFBD41C8E041B00B19B76 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F0FCFBD51C8E041B00B19B76 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F0FCFBD41C8E041B00B19B76 /* UBLoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UBLoginView.h; sourceTree = "<group>"; };
+		F0FCFBD51C8E041B00B19B76 /* UBLoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UBLoginView.m; sourceTree = "<group>"; };
 		F0FCFBD81C8E041B00B19B76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F0FCFBDA1C8E041B00B19B76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0FCFBDD1C8E041C00B19B76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8368B56456A4803840BCFE04 /* libPods-UBtalk.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41D40E0D506CECE0F2CE913A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				33CAD63B88E6F7B772E26068 /* Pods-UBtalk.debug.xcconfig */,
+				7F0F384513E31BF96376D56D /* Pods-UBtalk.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F0FCFBC21C8E041B00B19B76 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +99,8 @@
 				F0FCFBE71C8E041C00B19B76 /* UBtalkTests */,
 				F0FCFBF21C8E041C00B19B76 /* UBtalkUITests */,
 				F0FCFBCC1C8E041B00B19B76 /* Products */,
+				41D40E0D506CECE0F2CE913A /* Pods */,
+				F102191B28A405E02B5982B7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,8 +119,8 @@
 			children = (
 				F0FCFBD11C8E041B00B19B76 /* AppDelegate.h */,
 				F0FCFBD21C8E041B00B19B76 /* AppDelegate.m */,
-				F0FCFBD41C8E041B00B19B76 /* ViewController.h */,
-				F0FCFBD51C8E041B00B19B76 /* ViewController.m */,
+				F0FCFBD41C8E041B00B19B76 /* UBLoginView.h */,
+				F0FCFBD51C8E041B00B19B76 /* UBLoginView.m */,
 				F0FCFBD71C8E041B00B19B76 /* Main.storyboard */,
 				F0FCFBDA1C8E041B00B19B76 /* Assets.xcassets */,
 				F0FCFBDC1C8E041C00B19B76 /* LaunchScreen.storyboard */,
@@ -140,6 +156,14 @@
 			path = UBtalkUITests;
 			sourceTree = "<group>";
 		};
+		F102191B28A405E02B5982B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				176EAA0765C6A504C0AAF3A7 /* libPods-UBtalk.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0FCFBF81C8E041C00B19B76 /* Build configuration list for PBXNativeTarget "UBtalk" */;
 			buildPhases = (
+				FD920AF994D22E58BB47176A /* Check Pods Manifest.lock */,
 				F0FCFBC71C8E041B00B19B76 /* Sources */,
 				F0FCFBC81C8E041B00B19B76 /* Frameworks */,
 				F0FCFBC91C8E041B00B19B76 /* Resources */,
+				913C2167C1EEE0DFEDD957C7 /* Embed Pods Frameworks */,
+				28D7174206059F14082001A1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,12 +292,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		28D7174206059F14082001A1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UBtalk/Pods-UBtalk-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		913C2167C1EEE0DFEDD957C7 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UBtalk/Pods-UBtalk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD920AF994D22E58BB47176A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F0FCFBC71C8E041B00B19B76 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0FCFBD61C8E041B00B19B76 /* ViewController.m in Sources */,
+				F0FCFBD61C8E041B00B19B76 /* UBLoginView.m in Sources */,
 				F0FCFBD31C8E041B00B19B76 /* AppDelegate.m in Sources */,
 				F0FCFBD01C8E041B00B19B76 /* main.m in Sources */,
 			);
@@ -409,9 +484,11 @@
 		};
 		F0FCFBF91C8E041C00B19B76 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33CAD63B88E6F7B772E26068 /* Pods-UBtalk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UBtalk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.IMS.JY.UBtalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -420,9 +497,11 @@
 		};
 		F0FCFBFA1C8E041C00B19B76 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F0F384513E31BF96376D56D /* Pods-UBtalk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UBtalk/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.IMS.JY.UBtalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -496,6 +575,7 @@
 				F0FCFBFA1C8E041C00B19B76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0FCFBFB1C8E041C00B19B76 /* Build configuration list for PBXNativeTarget "UBtalkTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +584,7 @@
 				F0FCFBFD1C8E041C00B19B76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0FCFBFE1C8E041C00B19B76 /* Build configuration list for PBXNativeTarget "UBtalkUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +593,7 @@
 				F0FCFC001C8E041C00B19B76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
