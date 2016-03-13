@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "chatview.h"
 
 @class XMPPStream;
 
 @interface UBLoginView : UIViewController
-<UITextFieldDelegate>
+
 
 
 @property (weak, nonatomic) IBOutlet UITextField *txid;
@@ -24,8 +24,9 @@
 
 -(IBAction)gologin:(id)sender;
 
+-(BOOL)connectSetting : (NSString *)setid: (NSString *)pass;
 -(void)setConnect;
--(void)setUpStream;
+
 -(void)connect;
 @end
 

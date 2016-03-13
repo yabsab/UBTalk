@@ -71,7 +71,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="201" y="261"/>
+            <point key="canvasLocation" x="-419" y="-131"/>
+        </scene>
+        <!--Chatview-->
+        <scene sceneID="7Rv-Vb-Ybu">
+            <objects>
+                <viewController id="lnD-Nx-dx9" customClass="chatview" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="znT-qn-kax"/>
+                        <viewControllerLayoutGuide type="bottom" id="hi9-lO-XUO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GCC-Hy-uvC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="view" destination="GCC-Hy-uvC" id="kFw-TU-ZFo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GYJ-Vt-crf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8" y="-142"/>
         </scene>
     </scenes>
 </document>
