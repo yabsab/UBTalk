@@ -12,4 +12,9 @@
 
 @interface chatview : UIViewController
 
+- (IBAction)btSendMessage:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *txsendMessage;
+
+@property (strong, nonatomic) XMPPStream *xmpp;
+
 @end

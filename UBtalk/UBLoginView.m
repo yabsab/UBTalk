@@ -13,6 +13,7 @@
 
 
 
+
 @interface UBLoginView () <XMPPStreamDelegate>
 
 @end
@@ -25,8 +26,6 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
-    
     
 }
 
@@ -47,26 +46,37 @@
     
 }
 
-
+- (void)setUpStream{
+    
+    _xmpp = [[XMPPStream alloc]init];
+    [_xmpp setHostName:@"220.149.217.162"];
+    [_xmpp addDelegate:self
+         delegateQueue:dispatch_get_main_queue()];
+}
 -(void)connect{
     
     NSString *connectID = [NSString stringWithFormat:@"%@",txid.text];
     NSString *connectPass= [NSString stringWithFormat:@"%@",txpass.text];
     NSLog(@"로그인된 아이디 ID :%@ : ""%@",connectID,connectPass);
+    
 
     
     _xmpp = [[XMPPStream alloc]init];
     [_xmpp setHostName:@"220.149.217.162"];
-    [_xmpp addDelegate:self delegateQueue:dispatch_get_main_queue()];
-    [_xmpp setMyJID:[XMPPJID jidWithUser:connectID domain:@"220.149.217.162" resource:nil]];
+    [_xmpp addDelegate:self
+         delegateQueue:dispatch_get_main_queue()];
     [_xmpp setHostPort:50001];
-     NSError *error = nil;
-    [_xmpp connectWithTimeout:30.0 error:&error];
-   
 
+    [_xmpp setMyJID:[XMPPJID jidWithUser:connectID domain:@"220.149.217.162" resource:nil]];
+    [_xmpp connectWithTimeout:30.0 error:nil];
     
-    
+
 }
+
+
+
+
+
 
 #pragma mark XMPP Delegate
 
@@ -84,7 +94,7 @@
 
 
 -(void)xmppStream:(XMPPStream *)sender didNotAuthenticate:(DDXMLElement *)error{
-   
+    
     UIAlertView *theAlert = [[UIAlertView alloc] initWithTitle:@"로그인 정보 확인"
                                                        message:@"ID 및 PassWord 확인해주세요"
                                                       delegate:self
@@ -98,12 +108,12 @@
 
 - (void)xmppStreamDidConnect:(XMPPStream *)sender{
     
-     NSString *connectPass= [NSString stringWithFormat:@"%@",txpass.text];
+    NSString *connectPass= [NSString stringWithFormat:@"%@",txpass.text];
     
     NSError *checkconnect;
     [sender authenticateWithPassword:connectPass error:&checkconnect];
-  
-
+    
+    
 }
 
 
@@ -113,8 +123,7 @@
     
     [stream sendElement:presence];
     
-    chatview *_chatview = [[chatview alloc] init];
-    [self presentViewController:_chatview animated:NO completion:nil];
+    [self performSegueWithIdentifier:@"test" sender:self];
 }
 
 
@@ -138,35 +147,5 @@
 }
 
 
-
-
-- (void)xmppStream:(XMPPStream *)sender didReceiveMessage:(XMPPMessage *)message{
-    
-    NSString *msg = [[message elementForName:@"body"] stringValue];
-    NSString *from = [[message attributeForName:@"from"] stringValue];
-    NSMutableDictionary *m = [[NSMutableDictionary alloc] init];
-    NSLog(@"%@",msg);
-    NSLog(@"%@",from);
-}
-
-
--(IBAction)sendmessage:(id)sender  {
-    
-    NSString *messageStr = self.txpass.text;
-    
-    if([messageStr length] > 0) {
-        
-        NSXMLElement *body = [NSXMLElement elementWithName:@"body"];
-        [body setStringValue:messageStr];
-        
-        NSXMLElement *message = [NSXMLElement elementWithName:@"message"];
-        [message addAttributeWithName:@"type" stringValue:@"chat"];
-        [message addAttributeWithName:@"to" stringValue:@"admin2@desktop-kky"];
-        [message addChild:body];
-        
-        [self.xmpp sendElement:message];
-        
-    }
-}
 
 @end

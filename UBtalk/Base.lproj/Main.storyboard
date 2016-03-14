@@ -8,7 +8,7 @@
         <!--Login View-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="UBLoginView" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainstoryboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="UBLoginView" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -59,6 +59,11 @@
                                     <action selector="sendmessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o23-f2-ji0"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pGY-64-mlP">
+                                <rect key="frame" x="20" y="302" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -66,34 +71,59 @@
                     <connections>
                         <outlet property="dislabel" destination="0pN-Xz-pZF" id="Fby-bo-EOh"/>
                         <outlet property="txid" destination="n0r-8M-Xyh" id="P7h-yw-QsR"/>
+                        <outlet property="txmessage" destination="pGY-64-mlP" id="wOo-aq-OdB"/>
                         <outlet property="txpass" destination="bld-ES-5yZ" id="DCk-3Y-Nar"/>
+                        <segue destination="HEo-Ya-i8v" kind="modal" identifier="test" id="BmF-Vo-Kcg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-419" y="-131"/>
+            <point key="canvasLocation" x="-651" y="-181"/>
         </scene>
         <!--Chatview-->
-        <scene sceneID="7Rv-Vb-Ybu">
+        <scene sceneID="4Ue-rk-gBl">
             <objects>
-                <viewController id="lnD-Nx-dx9" customClass="chatview" sceneMemberID="viewController">
+                <viewController id="HEo-Ya-i8v" customClass="chatview" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="znT-qn-kax"/>
-                        <viewControllerLayoutGuide type="bottom" id="hi9-lO-XUO"/>
+                        <viewControllerLayoutGuide type="top" id="Ctc-kU-8ga"/>
+                        <viewControllerLayoutGuide type="bottom" id="Etz-lo-1Lt"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="GCC-Hy-uvC">
+                    <view key="view" contentMode="scaleToFill" id="LGZ-2J-Yd7" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bdG-BJ-adC">
+                                <rect key="frame" x="57" y="62" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hXP-xL-0tx">
+                                <rect key="frame" x="57" y="117" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LhB-vs-DxA">
+                                <rect key="frame" x="186" y="62" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eP-dJ-6Vr">
+                                <rect key="frame" x="186" y="116" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="btSendMessage:" destination="HEo-Ya-i8v" eventType="touchUpInside" id="IPa-eV-F1Q"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="view" destination="GCC-Hy-uvC" id="kFw-TU-ZFo"/>
+                        <outlet property="txsendMessage" destination="hXP-xL-0tx" id="D7m-cl-aji"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GYJ-Vt-crf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zi4-CM-zNj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8" y="-142"/>
+            <point key="canvasLocation" x="-265" y="-186"/>
         </scene>
     </scenes>
 </document>

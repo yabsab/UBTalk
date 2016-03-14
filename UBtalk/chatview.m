@@ -8,24 +8,62 @@
 
 #import "chatview.h"
 #import "UBLoginView.h"
+#import <xmpp.h>
 
-@interface chatview ()
+
+
+@interface chatview () <XMPPStreamDelegate>
+
 
 @end
 
 @implementation chatview
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
-
-
+  
+                                
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
   }
 
+- (void)xmppStream:(XMPPStream *)sender didReceiveMessage:(XMPPMessage *)message{
+    
+    NSString *msg = [[message elementForName:@"body"] stringValue];
+    NSString *from = [[message attributeForName:@"from"] stringValue];
+    NSMutableDictionary *m = [[NSMutableDictionary alloc] init];
+    NSLog(@"%@",msg);
+    NSLog(@"%@",from);
+}
 
 
+- (void)xmppStream:(XMPPStream *)sender socketDidConnect:(GCDAsyncSocket *)socket{
+    
+}
+
+- (IBAction)btSendMessage:(id)sender {
+    
+        NSString *messageStr = self.txsendMessage.text;
+    
+        if([messageStr length] > 0) {
+    
+            NSXMLElement *body = [NSXMLElement elementWithName:@"body"];
+            [body setStringValue:messageStr];
+    
+            NSXMLElement *message = [NSXMLElement elementWithName:@"message"];
+            [message addAttributeWithName:@"type" stringValue:@"chat"];
+            [message addAttributeWithName:@"to" stringValue:@"admin2@desktop-kky"];
+            [message addChild:body];
+    
+            [self.xmpp sendElement:message];
+            
+ 
+        }
+}
 
 @end
