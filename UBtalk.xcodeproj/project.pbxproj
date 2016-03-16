@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8368B56456A4803840BCFE04 /* libPods-UBtalk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 176EAA0765C6A504C0AAF3A7 /* libPods-UBtalk.a */; };
+		F016FB091C97A15A000CFD5C /* UBchat_singleTone.m in Sources */ = {isa = PBXBuildFile; fileRef = F016FB081C97A15A000CFD5C /* UBchat_singleTone.m */; };
 		F0B275BB1C92B6BD004B53BA /* chatview.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B275BA1C92B6BD004B53BA /* chatview.m */; };
 		F0FCFBD01C8E041B00B19B76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FCFBCF1C8E041B00B19B76 /* main.m */; };
 		F0FCFBD31C8E041B00B19B76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0FCFBD21C8E041B00B19B76 /* AppDelegate.m */; };
@@ -40,6 +41,8 @@
 		176EAA0765C6A504C0AAF3A7 /* libPods-UBtalk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UBtalk.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33CAD63B88E6F7B772E26068 /* Pods-UBtalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBtalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UBtalk/Pods-UBtalk.debug.xcconfig"; sourceTree = "<group>"; };
 		7F0F384513E31BF96376D56D /* Pods-UBtalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UBtalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-UBtalk/Pods-UBtalk.release.xcconfig"; sourceTree = "<group>"; };
+		F016FB071C97A15A000CFD5C /* UBchat_singleTone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBchat_singleTone.h; sourceTree = "<group>"; };
+		F016FB081C97A15A000CFD5C /* UBchat_singleTone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBchat_singleTone.m; sourceTree = "<group>"; };
 		F0B275B91C92B6BD004B53BA /* chatview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chatview.h; sourceTree = "<group>"; };
 		F0B275BA1C92B6BD004B53BA /* chatview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chatview.m; sourceTree = "<group>"; };
 		F0FCFBCB1C8E041B00B19B76 /* UBtalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UBtalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +98,33 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F016FB0A1C97A165000CFD5C /* 0)UBsingletone */ = {
+			isa = PBXGroup;
+			children = (
+				F016FB071C97A15A000CFD5C /* UBchat_singleTone.h */,
+				F016FB081C97A15A000CFD5C /* UBchat_singleTone.m */,
+			);
+			name = "0)UBsingletone";
+			sourceTree = "<group>";
+		};
+		F0E5F96B1C97DE68000C6F2B /* 1)LoginviewController */ = {
+			isa = PBXGroup;
+			children = (
+				F0FCFBD41C8E041B00B19B76 /* UBLoginView.h */,
+				F0FCFBD51C8E041B00B19B76 /* UBLoginView.m */,
+			);
+			name = "1)LoginviewController";
+			sourceTree = "<group>";
+		};
+		F0E5F96C1C97F06E000C6F2B /* 2)chat */ = {
+			isa = PBXGroup;
+			children = (
+				F0B275B91C92B6BD004B53BA /* chatview.h */,
+				F0B275BA1C92B6BD004B53BA /* chatview.m */,
+			);
+			name = "2)chat";
+			sourceTree = "<group>";
+		};
 		F0FCFBC21C8E041B00B19B76 = {
 			isa = PBXGroup;
 			children = (
@@ -120,12 +150,11 @@
 		F0FCFBCD1C8E041B00B19B76 /* UBtalk */ = {
 			isa = PBXGroup;
 			children = (
+				F016FB0A1C97A165000CFD5C /* 0)UBsingletone */,
+				F0E5F96B1C97DE68000C6F2B /* 1)LoginviewController */,
+				F0E5F96C1C97F06E000C6F2B /* 2)chat */,
 				F0FCFBD11C8E041B00B19B76 /* AppDelegate.h */,
 				F0FCFBD21C8E041B00B19B76 /* AppDelegate.m */,
-				F0FCFBD41C8E041B00B19B76 /* UBLoginView.h */,
-				F0FCFBD51C8E041B00B19B76 /* UBLoginView.m */,
-				F0B275B91C92B6BD004B53BA /* chatview.h */,
-				F0B275BA1C92B6BD004B53BA /* chatview.m */,
 				F0FCFBD71C8E041B00B19B76 /* Main.storyboard */,
 				F0FCFBDA1C8E041B00B19B76 /* Assets.xcassets */,
 				F0FCFBDC1C8E041C00B19B76 /* LaunchScreen.storyboard */,
@@ -351,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0B275BB1C92B6BD004B53BA /* chatview.m in Sources */,
+				F016FB091C97A15A000CFD5C /* UBchat_singleTone.m in Sources */,
 				F0FCFBD61C8E041B00B19B76 /* UBLoginView.m in Sources */,
 				F0FCFBD31C8E041B00B19B76 /* AppDelegate.m in Sources */,
 				F0FCFBD01C8E041B00B19B76 /* main.m in Sources */,

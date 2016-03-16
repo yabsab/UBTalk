@@ -10,8 +10,8 @@
 #import "chatview.h"
 
 
-@class XMPPStream;
-@class chatview;
+
+@class UBchat_singleTone;
 
 @interface UBLoginView : UIViewController
 
@@ -19,19 +19,11 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *txid;
 @property (weak, nonatomic) IBOutlet UITextField *txpass;
-@property (weak, nonatomic) IBOutlet UITextField *txmessage;
-
-@property (strong, nonatomic) XMPPStream *xmpp;
-@property (weak, nonatomic) IBOutlet UILabel *dislabel;
-
-- (IBAction)sendmessage:(id)sender;
+@property (nonatomic,strong) UBchat_singleTone *ubchat_singletone;
 
 
 -(IBAction)gologin:(id)sender;
 
-
--(void)setConnect;
--(void)connect;
 
 @end
 

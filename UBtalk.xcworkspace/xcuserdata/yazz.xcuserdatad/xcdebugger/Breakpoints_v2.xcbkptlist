@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UBtalk/UBLoginView.m"
-            timestampString = "479653730.678773"
+            timestampString = "479803056.122042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166">
+            startingLineNumber = "68"
+            endingLineNumber = "68">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -40,12 +40,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UBtalk/chatview.m"
-            timestampString = "479652755.428866"
+            timestampString = "479813619.71516"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "-xmppStream:didReceiveMessage:"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "-btSendMessage:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

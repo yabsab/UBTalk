@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <XMPP.h>
 
+@class XMPPStream;
+@interface AppDelegate : UIResponder <UIApplicationDelegate>{
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+XMPPStream *xmppStream;
+}
 
+@property (nonatomic, readonly) XMPPStream *xmppStream;
 @property (strong, nonatomic) UIWindow *window;
-
 
 @end
 

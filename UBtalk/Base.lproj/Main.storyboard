@@ -27,12 +27,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pN-Xz-pZF">
-                                <rect key="frame" x="166" y="411" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXK-l2-Xys">
                                 <rect key="frame" x="35" y="99" width="21" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -52,26 +46,12 @@
                                     <action selector="gologin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CZi-AF-pio"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kkk-EK-24u">
-                                <rect key="frame" x="171" y="251" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="sendmessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o23-f2-ji0"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pGY-64-mlP">
-                                <rect key="frame" x="20" y="302" width="300" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="dislabel" destination="0pN-Xz-pZF" id="Fby-bo-EOh"/>
                         <outlet property="txid" destination="n0r-8M-Xyh" id="P7h-yw-QsR"/>
-                        <outlet property="txmessage" destination="pGY-64-mlP" id="wOo-aq-OdB"/>
                         <outlet property="txpass" destination="bld-ES-5yZ" id="DCk-3Y-Nar"/>
                         <segue destination="HEo-Ya-i8v" kind="modal" identifier="test" id="BmF-Vo-Kcg"/>
                     </connections>
