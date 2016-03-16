@@ -6,7 +6,7 @@
 //  Copyright © 2016년 IMS. All rights reserved.
 //
 
-
+#import "AppDelegate.h"
 #import "UBLoginView.h"
 #import <XMPP.h>
 #import "chatview.h"
@@ -40,8 +40,8 @@
 
 //로그인
 - (IBAction)gologin:(id)sender {
-    _ubchat_singletone = [[UBchat_singleTone alloc]init];
-    [_ubchat_singletone connectServer:_txid.text :_txpass.text];
+   _ubchat_singleTone  = [[UBchat_singleTone alloc]init];
+    [_ubchat_singleTone connectServer:_txid.text :_txpass.text];
     [self performSegueWithIdentifier:@"test" sender:self];
 
 }

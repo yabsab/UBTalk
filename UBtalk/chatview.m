@@ -9,7 +9,6 @@
 #import "chatview.h"
 #import "UBLoginView.h"
 #import "UBchat_singleTone.h"
-
 #import <XMPP.h>
 
 @interface chatview () <XMPPStreamDelegate>
@@ -17,6 +16,15 @@
 @end
 
 @implementation chatview
+
+-(UBchat_singleTone *)ubsingle {
+    
+    return (UBchat_singleTone *)[[UIApplication sharedApplication]delegate];
+}
+
+- (XMPPStream *)xmppStream {
+    return [[self ubsingle] xmppStream];
+}
 
 
 - (void)viewDidLoad {
@@ -34,11 +42,6 @@
 - (IBAction)btSendMessage:(id)sender {
    
     
-
-    xmpp = [[XMPPStream alloc] init];
-    [xmpp addDelegate:self delegateQueue:dispatch_get_main_queue()];
-    
-    
     NSString *messageStr = self.txsendMessage.text;
     if([messageStr length] > 0) {
         NSXMLElement *body = [NSXMLElement elementWithName:@"body"];
@@ -48,8 +51,8 @@
         [message addAttributeWithName:@"type" stringValue:@"chat"];
         [message addAttributeWithName:@"to" stringValue:@"testjy@desktop-kky"];
         [message addChild:body];
-
-        [self.xmpp sendElement:message];
+        [self.xmppStream sendElement:message];
+        
 
     
     }

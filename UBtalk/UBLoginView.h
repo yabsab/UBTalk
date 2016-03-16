@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "chatview.h"
+#import "UBchat_singleTone.h"
 
 
 
@@ -19,7 +20,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *txid;
 @property (weak, nonatomic) IBOutlet UITextField *txpass;
-@property (nonatomic,strong) UBchat_singleTone *ubchat_singletone;
+@property (nonatomic,strong) UBchat_singleTone  *ubchat_singleTone;
 
 
 -(IBAction)gologin:(id)sender;
