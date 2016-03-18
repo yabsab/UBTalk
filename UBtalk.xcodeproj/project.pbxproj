@@ -268,6 +268,7 @@
 				TargetAttributes = {
 					F0FCFBCA1C8E041B00B19B76 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = HKUW29KE3M;
 					};
 					F0FCFBE31C8E041C00B19B76 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -523,11 +524,14 @@
 			baseConfigurationReference = 33CAD63B88E6F7B772E26068 /* Pods-UBtalk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = UBtalk/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.IMS.JY.UBtalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -536,11 +540,14 @@
 			baseConfigurationReference = 7F0F384513E31BF96376D56D /* Pods-UBtalk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = UBtalk/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.IMS.JY.UBtalk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

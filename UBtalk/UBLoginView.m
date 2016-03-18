@@ -13,16 +13,13 @@
 #import "UBchat_singleTone.h"
 
 
-
-
 @interface UBLoginView () <XMPPStreamDelegate>
+
 
 @end
 
 
 @implementation UBLoginView
-  BOOL checklogin = YES;
-
 
 
 
@@ -36,14 +33,16 @@
     [super didReceiveMemoryWarning];
 }
 
-
+- (IBAction)gochat:(id)sender {
+}
 
 //로그인
 - (IBAction)gologin:(id)sender {
-   _ubchat_singleTone  = [[UBchat_singleTone alloc]init];
+    _ubchat_singleTone  = [[UBchat_singleTone alloc]init];
     [_ubchat_singleTone connectServer:_txid.text :_txpass.text];
-    [self performSegueWithIdentifier:@"test" sender:self];
-
+    [self performSegueWithIdentifier:@"goChatView" sender:self];
+    
+   
 }
 
 

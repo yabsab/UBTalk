@@ -11,25 +11,22 @@
 #import "UBchat_singleTone.h"
 #import <XMPP.h>
 
-@interface chatview () <XMPPStreamDelegate>
+@interface chatview ()
+
+@property (nonatomic, strong) UBchat_singleTone *singleTone;
 
 @end
 
+
 @implementation chatview
-
--(UBchat_singleTone *)ubsingle {
-    
-    return (UBchat_singleTone *)[[UIApplication sharedApplication]delegate];
-}
-
-- (XMPPStream *)xmppStream {
-    return [[self ubsingle] xmppStream];
-}
 
 
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    
+    self.singleTone = [UBchat_singleTone LoginInstanc];
+
 }
 
 
@@ -40,24 +37,15 @@
 
 
 - (IBAction)btSendMessage:(id)sender {
-   
     
-    NSString *messageStr = self.txsendMessage.text;
-    if([messageStr length] > 0) {
-        NSXMLElement *body = [NSXMLElement elementWithName:@"body"];
-        [body setStringValue:messageStr];
-        
-        NSXMLElement *message = [NSXMLElement elementWithName:@"message"];
-        [message addAttributeWithName:@"type" stringValue:@"chat"];
-        [message addAttributeWithName:@"to" stringValue:@"testjy@desktop-kky"];
-        [message addChild:body];
-        [self.xmppStream sendElement:message];
-        
 
+ 
+
+    NSMutableDictionary *addchat =[[NSMutableDictionary alloc]init];
+    [addchat setObject:_sendId.text forKey:@"id"];
+    [addchat setObject:_txsendMessage.text forKey:@"message"];
     
-    }
-    
-    
+    [_singleTone sendMessage:addchat];
     
   }
 

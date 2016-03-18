@@ -11,9 +11,13 @@
 
 
 @interface chatview : UIViewController
+    
+
 
 - (IBAction)btSendMessage:(id)sender;
+
 @property (weak, nonatomic) IBOutlet UITextField *txsendMessage;
+@property (weak, nonatomic) IBOutlet UITextField *sendId;
 
 
 @end

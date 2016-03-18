@@ -9,25 +9,23 @@
 #import "UBchat_singleTone.h"
 
 @interface UBchat_singleTone() <XMPPStreamDelegate>
-
-
 @end
 
 
 
 @implementation UBchat_singleTone
 
-//+ (UBchat_singleTone *)sharedInstanc{
-//    
-//    static UBchat_singleTone *sharedInstance = nil;
-//    
-//    if(sharedInstance==nil){
-//        
-//        sharedInstance = [[UBchat_singleTone alloc]init];
-//        
-//    }
-//     return sharedInstance;
-//}
++ (UBchat_singleTone *)sharedInstanc{
+    
+    static UBchat_singleTone *sharedInstance = nil;
+    
+    if(sharedInstance==nil){
+        
+        sharedInstance = [[UBchat_singleTone alloc]init];
+        
+    }
+     return sharedInstance;
+}
 
 
 -(void)connectServer:(NSString *)connectID :(NSString *)connectpassword{
@@ -45,6 +43,62 @@
     [_xmppStream setMyJID:[XMPPJID jidWithUser:connectID domain:@"220.149.217.162" resource:nil]];
     [_xmppStream connectWithTimeout:30.0 error:nil];
 
+}
+
+
+
+
+
+-(void)sendMessage:(NSMutableDictionary *)messageParams{
+  
+    NSDictionary *messageStr = [[NSMutableDictionary alloc]init];
+    messageStr = messageParams;
+    
+    NSString *sendID = [messageStr objectForKey:@"id"];
+    NSString *sendMessage= [messageStr objectForKey:@"message"];
+    
+ 
+    
+    if([messageStr count]>0){
+   
+        NSXMLElement *body = [NSXMLElement elementWithName:@"body"];
+        [body setStringValue:sendMessage];
+        NSLog(@"%@",body);
+        
+        NSXMLElement *SendMessage = [NSXMLElement elementWithName:@"message"];
+        [SendMessage addAttributeWithName:@"type" objectValue:sendMessage];
+        [SendMessage addAttributeWithName:@"to" objectValue:sendID];
+         NSLog(@"메시지%@",SendMessage);
+
+       
+        [self.xmppStream sendElement: SendMessage];
+
+    }
+//    if([messageStr count] > 0) {
+//        
+//        NSXMLElement *body = [NSXMLElement elementWithName:@"body"];
+//        [body setStringValue:messageStr];
+//        
+//        NSXMLElement *message = [NSXMLElement elementWithName:@"message"];
+//        [message addAttributeWithName:@"type" stringValue:@"chat"];
+//        [message addAttributeWithName:@"to" stringValue:@"testjy@desktop-kky"];
+//        [message addChild:body];
+//        
+//        
+//        [self.xmppStream sendElement: message];
+//        
+//        
+//    }
+    
+}
+
+
+
+
+
+
+- (void)xmppStream:(XMPPStream *)sender didFailToSendMessage:(XMPPMessage *)message error:(NSError *)error{
+    
 }
 
 #pragma mark XMPP Delegate
@@ -80,6 +134,8 @@
 
     
 }
+
+
 
 
 - (void)xmppStreamDidAuthenticate:(XMPPStream *)stream{

@@ -15,8 +15,7 @@
     XMPPStream *xmppStream;
     NSString *password;
     NSString *loginid;
-    
-
+    NSString *message;
 }
 
 @property (nonatomic,strong) XMPPStream *xmppStream;
@@ -24,9 +23,10 @@
 
 
 //로그인 메소드(싱글톤)
-//+(UBchat_singleTone *)LoginInstanc;
++(UBchat_singleTone *)LoginInstanc;
 
 -(void)connectServer: (NSString *)connectID : (NSString *)connectpassword;
+-(void) sendMessage : (NSDictionary *) messageParams;
 
 
 
