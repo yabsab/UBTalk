@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XMPP.h>
+#import "UBchat_singleTone.h"
 
 
 @interface chatview : UIViewController
@@ -19,5 +20,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *txsendMessage;
 @property (weak, nonatomic) IBOutlet UITextField *sendId;
 
+@property (nonatomic, strong) UBchat_singleTone *singleTone;
+@property (nonatomic, strong) XMPPStream *xmppStream;
 
 @end

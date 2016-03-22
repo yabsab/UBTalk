@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <XMPP.h>
 
-
 @interface UBchat_singleTone : NSObject {
     
     XMPPStream *xmppStream;
@@ -18,15 +17,17 @@
     NSString *message;
 }
 
-@property (nonatomic,strong) XMPPStream *xmppStream;
 
+@property (nonatomic,strong) XMPPStream *xmppStream;
 
 
 //로그인 메소드(싱글톤)
 +(UBchat_singleTone *)LoginInstanc;
 
+
+
 -(void)connectServer: (NSString *)connectID : (NSString *)connectpassword;
--(void) sendMessage : (NSDictionary *) messageParams;
+-(void)sendMessage : (NSDictionary *) messageParams;
 
 
 

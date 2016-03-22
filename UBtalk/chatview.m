@@ -10,10 +10,10 @@
 #import "UBLoginView.h"
 #import "UBchat_singleTone.h"
 #import <XMPP.h>
+#import <XMPPStream.h>
+
 
 @interface chatview ()
-
-@property (nonatomic, strong) UBchat_singleTone *singleTone;
 
 @end
 
@@ -24,9 +24,8 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
     self.singleTone = [UBchat_singleTone LoginInstanc];
-
+    
 }
 
 
@@ -38,14 +37,11 @@
 
 - (IBAction)btSendMessage:(id)sender {
     
-
- 
-
     NSMutableDictionary *addchat =[[NSMutableDictionary alloc]init];
     [addchat setObject:_sendId.text forKey:@"id"];
     [addchat setObject:_txsendMessage.text forKey:@"message"];
-    
     [_singleTone sendMessage:addchat];
+    
     
   }
 
