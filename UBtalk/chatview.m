@@ -13,7 +13,7 @@
 #import <XMPPStream.h>
 
 
-@interface chatview ()
+@interface chatview () <XMPPStreamDelegate>
 
 @end
 
@@ -24,9 +24,8 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    self.singleTone = [UBchat_singleTone LoginInstanc];
-    
-}
+    self.shareInstance = [UBchat_singleTone shareInstance];
+   }
 
 
 
@@ -35,14 +34,20 @@
   }
 
 
+
 - (IBAction)btSendMessage:(id)sender {
     
+    
+    _shareInstance = [UBchat_singleTone shareInstance];
     NSMutableDictionary *addchat =[[NSMutableDictionary alloc]init];
     [addchat setObject:_sendId.text forKey:@"id"];
     [addchat setObject:_txsendMessage.text forKey:@"message"];
-    [_singleTone sendMessage:addchat];
+    [_shareInstance sendMessage:addchat];
+   
     
+
     
   }
+
 
 @end

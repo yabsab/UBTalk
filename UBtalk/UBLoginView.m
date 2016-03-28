@@ -11,6 +11,7 @@
 #import <XMPP.h>
 #import "chatview.h"
 #import "UBchat_singleTone.h"
+#import <XMPPStream.h>
 
 
 @interface UBLoginView () <XMPPStreamDelegate>
@@ -26,6 +27,8 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    self.shareInstance =[UBchat_singleTone shareInstance];
+    
     
 }
 
@@ -52,8 +55,8 @@
     
     //수정 로그인 확인 시 다음 화면으로 
     
-    _ubchat_singleTone  = [[UBchat_singleTone alloc]init];
-    [_ubchat_singleTone connectServer:_txid.text :_txpass.text];
+    _shareInstance = [UBchat_singleTone shareInstance];
+    [_shareInstance connectServer:_txid.text :_txpass.text];
    [self performSegueWithIdentifier:@"goChatView" sender:self];
     
    

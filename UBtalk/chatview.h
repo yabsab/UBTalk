@@ -17,10 +17,15 @@
 
 - (IBAction)btSendMessage:(id)sender;
 
+
+
+
 @property (weak, nonatomic) IBOutlet UITextField *txsendMessage;
 @property (weak, nonatomic) IBOutlet UITextField *sendId;
 
-@property (nonatomic, strong) UBchat_singleTone *singleTone;
-@property (nonatomic, strong) XMPPStream *xmppStream;
+
+@property (nonatomic, strong) UBchat_singleTone *shareInstance;
+
+
 
 @end

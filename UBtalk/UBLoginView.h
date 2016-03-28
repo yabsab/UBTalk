@@ -12,7 +12,6 @@
 
 
 
-@class UBchat_singleTone;
 
 @interface UBLoginView : UIViewController
 
@@ -20,7 +19,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *txid;
 @property (weak, nonatomic) IBOutlet UITextField *txpass;
 
-@property (nonatomic,strong) UBchat_singleTone  *ubchat_singleTone;
+@property (nonatomic,strong) UBchat_singleTone  *shareInstance;
 
 
 -(IBAction)gologin:(id)sender;

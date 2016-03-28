@@ -8,9 +8,11 @@
 
 #import "UBchat_singleTone.h"
 #import <XMPP.h>
-#import <XMPPMessageDeliveryReceipts.h>
+#import <XMPPRosterMemoryStorage.h>
+
 
 @interface UBchat_singleTone() <XMPPStreamDelegate>
+@property (nonatomic,strong) XMPPStream *xmppStream;
 
 
 
@@ -19,44 +21,64 @@
 @implementation UBchat_singleTone
 
 
-+(UBchat_singleTone *)LoginInstanc{
++(UBchat_singleTone *)shareInstance{
+    static UBchat_singleTone *_ubchat_singleTone;
     
-    static UBchat_singleTone *LoginInstanc = nil;
-    
-    if(LoginInstanc==nil){
+    if(_ubchat_singleTone==nil){
        
-        LoginInstanc = [[UBchat_singleTone alloc]init];
-        
-    }
-         return LoginInstanc;
+        _ubchat_singleTone = [[UBchat_singleTone alloc]init];
+        [_ubchat_singleTone connectServer:_ubchat_singleTone.loginid: _ubchat_singleTone.password ];
     
+    
+    }
+    return _ubchat_singleTone;
 }
+
+
+
+
+
+
+
+
+
+
+- (void)xmppStream:(XMPPStream *)sender didReceivePresence:(XMPPPresence *)presence{
+    
+
+
+
+}
+
+
+
+
 
 
 -(void)connectServer:(NSString *)connectID :(NSString *)connectpassword{
-    
-    
-    NSString *getloginId = [NSString stringWithFormat:@"%@",connectID];
-    NSString *getloginPass= [NSString stringWithFormat:@"%@",connectpassword];
-    password = getloginPass;
-    
-    NSLog(@"로그인된 아이디 ID :%@ : ""%@",getloginId,getloginPass);
-    _xmppStream = [[XMPPStream alloc]init];
-    [_xmppStream setHostName:@"220.149.217.162"];
-    [_xmppStream addDelegate:self delegateQueue:dispatch_get_main_queue()];
-    [_xmppStream setHostPort:50001];
-    [_xmppStream setMyJID:[XMPPJID jidWithUser:connectID domain:@"220.149.217.162" resource:nil]];
-    [_xmppStream connectWithTimeout:30.0 error:nil];
+   
+    [self setUpStream];
+
+    loginid = [NSString stringWithFormat:@"%@",connectID];
+    password= [NSString stringWithFormat:@"%@",connectpassword];
+    NSLog(@"로그인된 아이디 ID :%@ : ""%@",loginid,password);
+    [xmppStream setMyJID:[XMPPJID jidWithUser:connectID domain:@"220.149.217.162" resource:nil]];
+    [xmppStream connectWithTimeout:30.0 error:nil];
     
 }
 
+
+- (void)setUpStream{
+    
+    xmppStream = [[XMPPStream alloc]init];
+    [xmppStream setHostName:@"220.149.217.162"];
+    [xmppStream addDelegate:self delegateQueue:dispatch_get_main_queue()];
+    [xmppStream setHostPort:50001];
+}
 
 
 
 -(void)sendMessage:(NSMutableDictionary *)messageParams{
-
-    
-    
     NSDictionary *messageStr = [[NSMutableDictionary alloc]init];
     messageStr = messageParams;
     NSString *sendID = [messageStr objectForKey:@"id"];
@@ -64,29 +86,25 @@
     
     if([messageStr count]>0){
    
+        
         NSXMLElement *body = [NSXMLElement elementWithName:@"body"];
         [body setStringValue:sendMessage];
-        
-       NSXMLElement *SendMessage = [NSXMLElement elementWithName:@"message"];
-        [SendMessage addAttributeWithName:@"type" objectValue:sendMessage];
-        [SendMessage addAttributeWithName:@"to" objectValue:sendID];
+        NSXMLElement *SendMessage = [NSXMLElement elementWithName:@"message"];
+        [SendMessage addAttributeWithName:@"type" stringValue:@"chat"];
+        [SendMessage addAttributeWithName:@"to" stringValue:sendID];
         [SendMessage addChild:body];
-        NSLog(@"%@",SendMessage);
         
-        _xmppStream = [[XMPPStream alloc]init];
-        [_xmppStream sendElement: SendMessage];
+        //time stamp
+        NSDate *date = [NSDate date];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"hh:mm a"];
+         NSLog(@"%@",date);
+    
+        [xmppStream sendElement: SendMessage];
 
-          NSLog(@"%@",SendMessage);
-        
-        
-   
-        
-        
-
+         NSLog(@"%@",SendMessage);
       
     }
-
-
 
 
 }
@@ -98,8 +116,8 @@
 }
 
 
+
 - (void)xmppStream:(XMPPStream *)sender socketDidConnect:(GCDAsyncSocket *)socket{
-    
     
 }
 
@@ -111,6 +129,8 @@
     
     NSLog(@"%@",msg);
     NSLog(@"%@",from);
+    
+    
 }
 
 
@@ -119,22 +139,16 @@
     NSString *connectPass= [NSString stringWithFormat:@"%@",password];
     NSError *checkconnect;
     [sender authenticateWithPassword:connectPass error:&checkconnect];
-  
 
-    
 }
-
-
 
 
 - (void)xmppStreamDidAuthenticate:(XMPPStream *)stream{
     
     XMPPPresence *presence = [XMPPPresence presence];
     [stream sendElement:presence];
+    [[self xmppStream] sendElement:presence];
 
-    NSLog(@"==============================================================");
-    NSLog(@"xmppStreamDidAuthenticate");
-    NSLog(@"==============================================================");
     
 }
 
