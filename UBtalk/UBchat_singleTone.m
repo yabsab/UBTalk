@@ -8,13 +8,10 @@
 
 #import "UBchat_singleTone.h"
 #import <XMPP.h>
-#import <XMPPRosterMemoryStorage.h>
-
+#import "chatview.h"
 
 @interface UBchat_singleTone() <XMPPStreamDelegate>
 @property (nonatomic,strong) XMPPStream *xmppStream;
-
-
 
 @end
 
@@ -25,11 +22,9 @@
     static UBchat_singleTone *_ubchat_singleTone;
     
     if(_ubchat_singleTone==nil){
-       
+        
         _ubchat_singleTone = [[UBchat_singleTone alloc]init];
         [_ubchat_singleTone connectServer:_ubchat_singleTone.loginid: _ubchat_singleTone.password ];
-    
-    
     }
     return _ubchat_singleTone;
 }
@@ -37,22 +32,49 @@
 
 
 
-
-
-
-
-
-
-- (void)xmppStream:(XMPPStream *)sender didReceivePresence:(XMPPPresence *)presence{
+- (void)getAllRegisteredUsers {
     
-
-
-
+    NSError *error = [[NSError alloc] init];
+    NSXMLElement *query = [[NSXMLElement alloc] initWithXMLString:@"<query xmlns='jabber:iq:roster'/>"error:&error];
+    NSXMLElement *iq = [NSXMLElement elementWithName:@"iq"];
+    [iq addAttributeWithName:@"type" stringValue:@"get"];
+    [iq addAttributeWithName:@"id" stringValue:@"ANY_ID_NAME"];
+    [iq addAttributeWithName:@"from" stringValue:@"ANY_ID_NAME@weejoob.info"];
+    [iq addChild:query];
+    [xmppStream sendElement:iq];
 }
 
 
+- (BOOL)xmppStream:(XMPPStream *)sender didReceiveIQ:(XMPPIQ *)iq
+{
+   
+    chatview *chatView = [[chatview alloc]init];
+    NSXMLElement *queryElement = [iq elementForName:@"query" xmlns: @"jabber:iq:roster"];
+    
+    if (queryElement) {
+        NSArray *itemElements = [queryElement elementsForName: @"item"];
+        NSMutableArray *mArray = [[NSMutableArray alloc] init];
+        
+        for (int i=0; i<[itemElements count]; i++) {
+            
+            NSString *jid=[[[itemElements objectAtIndex:i] attributeForName:@"jid"] stringValue];
+            
+            [mArray addObject:jid];
+            
+           NSLog(@"%@",jid);
 
+        }
+        [chatView getbuddy:mArray];
+    }
+    
+    return NO; 
+}
 
+- (void)xmppStream:(XMPPStream *)sender didReceivePresence:(XMPPPresence *)presence{
+    
+      [self getAllRegisteredUsers];
+
+}
 
 
 -(void)connectServer:(NSString *)connectID :(NSString *)connectpassword{
@@ -139,6 +161,8 @@
     NSString *connectPass= [NSString stringWithFormat:@"%@",password];
     NSError *checkconnect;
     [sender authenticateWithPassword:connectPass error:&checkconnect];
+    [self getAllRegisteredUsers];
+
 
 }
 
@@ -148,7 +172,6 @@
     XMPPPresence *presence = [XMPPPresence presence];
     [stream sendElement:presence];
     [[self xmppStream] sendElement:presence];
-
     
 }
 

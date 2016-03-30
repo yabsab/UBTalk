@@ -12,7 +12,7 @@
 #import "chatview.h"
 #import "UBchat_singleTone.h"
 #import <XMPPStream.h>
-
+#import <XMPPRosterMemoryStorage.h>
 
 @interface UBLoginView () <XMPPStreamDelegate>
 

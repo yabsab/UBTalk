@@ -12,7 +12,7 @@
 
 
 @interface chatview : UIViewController
-    
+
 
 
 - (IBAction)btSendMessage:(id)sender;
@@ -27,5 +27,6 @@
 @property (nonatomic, strong) UBchat_singleTone *shareInstance;
 
 
+-(void)getbuddy : (NSMutableArray *) allbuddy;
 
 @end

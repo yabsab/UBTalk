@@ -25,13 +25,13 @@
     
     [super viewDidLoad];
     self.shareInstance = [UBchat_singleTone shareInstance];
-   }
+}
 
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-  }
+}
 
 
 
@@ -43,11 +43,17 @@
     [addchat setObject:_sendId.text forKey:@"id"];
     [addchat setObject:_txsendMessage.text forKey:@"message"];
     [_shareInstance sendMessage:addchat];
-   
     
+    
+}
 
+-(void)getbuddy : (NSMutableArray *) allbuddy{
+    NSMutableArray *disallbuddy = [[NSMutableArray alloc]init];
+    disallbuddy = allbuddy;
+    NSLog(@"%@",disallbuddy);
     
-  }
+    
+}
 
 
 @end
